@@ -14,7 +14,7 @@
 
   "content_scripts": [
    {
-     "matches": ["http://*.nytimes.com/*", "http://*.cnn.com/*", "http://*.foxnews.com/*", "http://*abcnews.go.com/*", "http://*.usatoday.com/*"],
+     "matches": ["http://*.nytimes.com/*", "http://*.cnn.com/*", "http://*.foxnews.com/*", "http://*.abcnews.go.com/*", "http://*.usatoday.com/*"],
      //"css": ["myStyles.css"],
      "js": ["contentScript.js"]
    }
