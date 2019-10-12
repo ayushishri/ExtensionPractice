@@ -24,4 +24,4 @@ function getText(){
   document.body.innerHTML = '<pre>'+str+'</pre>';
   return str;
 }
-}
+
