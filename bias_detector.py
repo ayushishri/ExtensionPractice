@@ -8,9 +8,8 @@ import nltk
 from bs4 import BeautifulSoup
 import argparse
 
-from google.cloud import languageact
-from google.cloud.language import enums
-from google.cloud.language import types
+from google.cloud import language_v1
+from google.cloud.language_v1 import enums
 
 websites = ["foxnews.com","cnn.com", "wsj.com", "breitbart.com"]
 keywords = ["conservative", "liberal", "democrat", "republican", "trump", "immigration",
@@ -21,7 +20,7 @@ right = ["conservative", "trump", "republican", "border wall", "tariffs"]
 
 res = ""
 
-url = "https://www.cnn.com/2019/10/11/politics/donald-trump-court-rulings-bad-day/index.html" #TODO taken  from javascript for the extension
+url = "https://www.cnn.com/2019/10/11/politics/donald-trump-court-rulings-bad-day/index.html" #TODO taken r fom javascript for the extension
 newssite = False
 blacklist = ['style', 'script']
 for site in websites:
@@ -36,9 +35,10 @@ if newssite:
     text = text.split('\n')
     articleText = max(text, key=len)
     articleSentences = articleText.split('.')
-    print(articleText)
+    # print(articleText)
     for sentence in articleSentences:
         print(sentence)
         for word in keywords:
             if word in sentence:
+                pass
                 #todo api call here
