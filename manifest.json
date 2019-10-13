@@ -6,7 +6,7 @@
 
   //recommended
   "description": "Watching the News with You!",
-  "permissions": ["declarativeContent","storage", "activeTab"],
+  "permissions": ["activeTab","tabs","declarativeContent","storage"],
 
   "page_action": {
   "default_popup": "popup.html"
